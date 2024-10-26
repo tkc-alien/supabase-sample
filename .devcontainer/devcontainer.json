@@ -1,0 +1,33 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "service": "supabase",
+  "workspaceFolder": "/work",
+
+  // 使用するコンテナ定義ファイルを指定する
+  "dockerComposeFile": [
+    "../.docker/docker-compose.yml",
+    "dev.docker-compose.yml"
+  ],
+
+  // DevContainer機能
+  "features": {
+    // Docker in Docker > Supabase CLIでDockerを使用するため
+    "ghcr.io/devcontainers/features/docker-in-docker": {}
+  },
+
+  // カスタム
+  "customizations": {
+    // VSCode拡張機能
+    "vscode": {
+      /** spell-checker: disable */
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "renesaarsoo.sql-formatter-vsc",
+        "yzhang.markdown-all-in-one",
+        "denoland.vscode-deno"
+      ]
+    }
+  }
+}

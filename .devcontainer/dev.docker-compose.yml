@@ -1,0 +1,10 @@
+# DevContainer用のコンテナ定義ファイル
+# メインのコンテナにプラスするような形で使用される
+
+version: "3.8"
+
+services:
+  supabase:
+    volumes:
+      - ..:/work:cached
+    command: "sleep infinity"
