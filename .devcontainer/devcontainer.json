@@ -27,7 +27,8 @@
         "renesaarsoo.sql-formatter-vsc",
         "yzhang.markdown-all-in-one",
         "denoland.vscode-deno",
-        "42Crunch.vscode-openapi"
+        "42Crunch.vscode-openapi",
+        "streetsidesoftware.code-spell-checker"
       ]
     }
   }
