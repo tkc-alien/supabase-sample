@@ -1,0 +1,32 @@
+openapi: "3.0.3"
+
+info:
+  title: API Title
+  version: "1.0"
+
+servers:
+  - url: http://127.0.0.1:54321/functions/v1
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+paths:
+  /hello-world:
+    post:
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        200:
+          description: OK
