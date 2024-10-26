@@ -2,7 +2,7 @@
   // Common
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "cSpell.words": ["devcontainers", "supabase"],
+  "cSpell.words": ["deno", "devcontainers", "openapi", "supabase"],
 
   // Deno
   "[typescript]": {
