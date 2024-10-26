@@ -24,6 +24,12 @@ supabase functions serve
 supabase status
 ```
 
+#### DB GUI で作成したスキーマをマイグレーションとして保存
+
+```sh
+supabase db diff --file {filename}
+```
+
 ## まなびメモ
 
 ### Supabase
@@ -36,6 +42,16 @@ supabase status
   - 他は特にこだわる感じではなさそう？個人的にはケバブ統一でいい気がする
 - (推奨) 関数名でないディレクトリはアンダースコアを接頭辞にする
 - (推奨) テストコードは`functions`直下に専用のディレクトリを作成し、ファイル名は接尾辞`test`をつける
+
+#### DB マイグレーション
+
+- [参考](https://zenn.dev/razokulover/articles/db984ebfcf4bf6)
+- おそらく GUI ベースでスキーマ構築するのがベストな感じ？もろもろ最適化してくれてそう
+- GUI で作成したスキーマを`supabase db diff`コマンドで SQL に起こしてバージョン管理に含めるのが良さげ？
+- 個人的には自前でコードベースで管理したい。なんか上手くできないかな…。
+  - `supabase/migrations`以下に SQL ファイルを置いて、`supabase migration up`を実行すれば一応 SQL で管理できた。
+  - ただし GUI で作成したものが既にある場合、up コマンドが正常に動作しない（デフォで`IF NOT EXISTS`がついてないので SQL のエラーになる）
+  - せっかくタイムスタンプ付けてるんだから最終適用日時を持っておいて適用範囲決めるくらいやってほしい…
 
 ### deno
 
