@@ -30,6 +30,14 @@ supabase status
 supabase db diff --file {filename}
 ```
 
+### Deno
+
+#### スキーマから型ファイル作成
+
+```sh
+bash ./.script/gen:schema.sh
+```
+
 ## まなびメモ
 
 ### Supabase
@@ -59,3 +67,8 @@ supabase db diff --file {filename}
 
 - [参考](https://supabase.com/docs/guides/functions/cors)
 - レスポンスに`Access-Control-Allow-Origin`ヘッダを設定する
+
+#### OpenAPI
+
+- 探したけど Supabase 用のジェネレータは提供されてなさそう
+- components の型生成だけできる軽量パッケージを一旦使ってみる

@@ -3,6 +3,10 @@
  */
 
 import { corsHeaders } from "../_shared/cors.ts";
+import type {
+  HelloWorldRequest,
+  HelloWorldResponse,
+} from "../_shared/schema.d.ts";
 
 console.log("Hello from Functions!");
 
@@ -13,9 +17,9 @@ Deno.serve(async (req) => {
     });
   }
 
-  const { name } = await req.json();
-  const data = {
-    message: `Hello ${name}!`,
+  const request: HelloWorldRequest = await req.json();
+  const data: HelloWorldResponse = {
+    message: `Hello ${request.name}!`,
   };
 
   return new Response(
