@@ -4,6 +4,8 @@ services:
   # Supabase
   supabase:
     build: ./supabase
+    image: supabase-sample.supabase
+    container_name: supabase-sample.supabase
     working_dir: /work
     tty: true
     stdin_open: true

@@ -2,7 +2,15 @@
   // Common
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "cSpell.words": ["aspida", "deno", "devcontainers", "openapi", "supabase"],
+  "cSpell.words": [
+    "aspida",
+    "autoincrement",
+    "datasource",
+    "deno",
+    "devcontainers",
+    "openapi",
+    "supabase"
+  ],
 
   // Deno
   "[typescript]": {
