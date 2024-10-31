@@ -28,7 +28,8 @@
         "yzhang.markdown-all-in-one",
         "denoland.vscode-deno",
         "42Crunch.vscode-openapi",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "Prisma.prisma"
       ]
     }
   }

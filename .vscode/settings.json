@@ -32,5 +32,8 @@
     "fs",
     "http",
     "net"
-  ]
+  ],
+
+  // Prisma
+  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" }
 }
